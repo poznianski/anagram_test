@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <form>
+    <input
+      name="firstValue"
+      onChange={[Function]}
+      placeholder="First String"
+      type="text"
+      value=""
+    />
+    <input
+      name="secondValue"
+      onChange={[Function]}
+      placeholder="Second String"
+      type="text"
+      value=""
+    />
+  </form>,
+  <button
+    onClick={[Function]}
+  />,
+  "",
+]
+`;
