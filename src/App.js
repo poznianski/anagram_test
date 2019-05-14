@@ -6,7 +6,10 @@ class App extends React.Component {
   render() {
     return (
         <Fragment>
-          <p>Anagram</p>
+          <p style={{
+            fontSize: '1.5em', 
+            marginLeft: '1.5em',
+            }}>Anagram</p>
           <Form />
         </Fragment>
   

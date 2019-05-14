@@ -14,28 +14,30 @@ it('renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-
-
 it('is an anagram', () => {
-    const wrapper = shallow(<Form />)
+  const wrapper = mount(<Form/>)
+  const firstInput = wrapper.find('input').at(0);
+  const secondInput = wrapper.find('input').at(1);
 
-    
-    wrapper.find('input').at(0).simulate('change', {target: {value: 'dada'}});
-    wrapper.find('input').at(1).simulate('change', {target: {value: 'adad'}});
+  firstInput.instance().value = 'y';
+  firstInput.simulate('change');
+  secondInput.instance().value = 'y';
+  secondInput.simulate('change');
 
-    wrapper.find('button').at(0).simulate('click');  
-    expect(wrapper.find('span').at(0).text()).toEqual('It\'s an anagram');
+  wrapper.find('button').at(0).simulate('click');
+  expect(wrapper.find('span').at(0).text()).toEqual('It\'s an anagram');
+});
 
-
-  });
 it('is not an anagram', () => {
-  const wrapper = shallow(<Form />)
+  const wrapper = mount(<Form />)
+  const firstInput = wrapper.find('input').at(0);
+  const secondInput = wrapper.find('input').at(1);
 
-  
-  wrapper.find('input').at(0).simulate('change', {target: {value: 'dadaw'}});
-  wrapper.find('input').at(1).simulate('change', {target: {value: 'dadaf'}});
+  firstInput.instance().value = 'ydao';
+  firstInput.simulate('change');
+  secondInput.instance().value = 'adyb';
+  secondInput.simulate('change');
 
-  wrapper.find('button').at(0).simulate('click');  
+  wrapper.find('button').at(0).simulate('click');
   expect(wrapper.find('span').at(0).text()).toEqual('It isn\'t an anagram');
-
-}); 
+});
