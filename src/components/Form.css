@@ -1,0 +1,24 @@
+button {
+    color: green;
+    margin-top: 1.5em;
+    margin-left: 1.5em
+}
+input {
+    margin-top: 1.5em;
+    margin-left: 1.5em
+}
+.success {
+    color: green
+}
+.error {
+    color: red
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+.hr {
+    border-style: solid
+}

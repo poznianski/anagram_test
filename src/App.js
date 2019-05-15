@@ -1,18 +1,15 @@
 import React, {Fragment} from 'react';
-import Form from './components/form';
-
+import Form from './components/Form';
+import './App.css'
 
 class App extends React.Component {
   render() {
     return (
         <Fragment>
-          <p style={{
-            fontSize: '1.5em', 
-            marginLeft: '1.5em',
-            }}>Anagram</p>
+          <h1>Anagram</h1>
           <Form />
         </Fragment>
-  
+
     )
   }
 }

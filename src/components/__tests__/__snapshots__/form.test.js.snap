@@ -5,55 +5,31 @@ Array [
   <form>
     <div>
       <input
+        className="input"
         name="firstValue"
         onChange={[Function]}
         placeholder="First String"
-        style={
-          Object {
-            "marginLeft": "1.5em",
-            "marginTop": "1.5em",
-          }
-        }
-        type="text"
         value=""
       />
     </div>
     <div>
       <input
+        className="input"
         name="secondValue"
         onChange={[Function]}
         placeholder="Second String"
-        style={
-          Object {
-            "marginLeft": "1.5em",
-            "marginTop": "1.5em",
-          }
-        }
-        type="text"
         value=""
       />
     </div>
   </form>,
-  <div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "color": "green",
-          "marginLeft": "1.5em",
-          "marginTop": "1.5em",
-        }
-      }
-    >
-      CHECK
-    </button>
-  </div>,
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    CHECK
+  </button>,
   <hr
-    style={
-      Object {
-        "borderStyle": "solid",
-      }
-    }
+    className="hr"
   />,
   <div>
     

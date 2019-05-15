@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import {compare} from '../helpers/checker';
-import styles from '../styles/styles';
+import '../components/Form.css';
+import '../helpers/constants/messages';
+import Constants from '../helpers/constants/messages';
 
 class Form extends React.Component {
     constructor(props) {
@@ -32,14 +34,14 @@ class Form extends React.Component {
             this.state.isAnagram ?
                 (
                     <Fragment>
-                        <span style={styles.success}>It's an anagram!</span>
-                        <img src="/images/checked.png" alt="img" style={styles.icon} />
+                        <img src="/images/checked.png" alt="img" className='icon' />
+                        <span className='success'>{Constants.SUCCESS_MESSAGE}</span>
                     </Fragment>
                 ) :
                 (
                     <Fragment>
-                        <span style={styles.error}>It isn't an anagram!</span>
-                        <img src="/images/error.png" alt="img" style={styles.icon} />
+                        <img src="/images/error.png" alt="img" className='icon' />
+                        <span className='error'>{Constants.ERROR_MESSAGE}</span>
                     </Fragment>
                 )
     )
@@ -51,8 +53,7 @@ class Form extends React.Component {
                 <form>
                     <div>
                         <input
-                          style={styles.input}
-                          type="text"
+                          className='input'
                           name="firstValue"
                           placeholder="First String"
                           value={this.state.firstValue}
@@ -62,8 +63,7 @@ class Form extends React.Component {
 
                     <div>
                         <input
-                          style={styles.input}
-                          type="text"
+                          className='input'
                           name="secondValue"
                           placeholder="Second String"
                           value={this.state.secondValue}
@@ -73,13 +73,12 @@ class Form extends React.Component {
                 </form>
 
                 <button
-                  style={styles.button}
+                  className='button'
                   onClick={this.handleButtonClick}
-                >
-                    CHECK
+                >CHECK
                 </button>
 
-                <hr style={styles.hr} />
+                <hr className='hr' />
                 <div>
                     {this.state.showMessage ? this.renderMessage() : ''}
                 </div>
