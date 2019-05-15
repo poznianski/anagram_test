@@ -17,6 +17,9 @@ const styles = {
     icon: {
         width: '25px',
         height: '25px',
+    },
+    hr: {
+        borderStyle: 'solid',
     }
   };
 

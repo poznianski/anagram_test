@@ -13,7 +13,7 @@ class Form extends React.Component {
         };
     }
 
-    handleInputChange = (event) => {
+    handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
             [name]: value,
@@ -29,19 +29,20 @@ class Form extends React.Component {
     }
 
     renderMessage = () => (
-            this.state.isAnagram ? (
-                <>
-                    <span style={styles.success}>It's an anagram!</span>
-                    <img src="/images/checked.png" alt="img" style={styles.icon} />
-                </>
-)
-                : (
-                    <>
+            this.state.isAnagram ?
+                (
+                    <Fragment>
+                        <span style={styles.success}>It's an anagram!</span>
+                        <img src="/images/checked.png" alt="img" style={styles.icon} />
+                    </Fragment>
+                ) :
+                (
+                    <Fragment>
                         <span style={styles.error}>It isn't an anagram!</span>
                         <img src="/images/error.png" alt="img" style={styles.icon} />
-                    </>
-)
-        )
+                    </Fragment>
+                )
+    )
 
 
     render() {
@@ -71,19 +72,14 @@ class Form extends React.Component {
                     </div>
                 </form>
 
-                <div>
-                    <button
-                      style={styles.button}
-                      onClick={this.handleButtonClick}
-                    >
+                <button
+                  style={styles.button}
+                  onClick={this.handleButtonClick}
+                >
+                    CHECK
+                </button>
 
-
-                        CHECK
-                    </button>
-
-                </div>
-                <hr style={{ borderStyle: 'solid' }} />
-
+                <hr style={styles.hr} />
                 <div>
                     {this.state.showMessage ? this.renderMessage() : ''}
                 </div>
