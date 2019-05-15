@@ -1,4 +1,5 @@
-import compare from "../../helpers/checker";
+
+import {compare} from "../../helpers/checker";
 
 describe('compare function', () => {
     it('returns proper values if anagram', () => {
@@ -7,7 +8,7 @@ describe('compare function', () => {
     it('returns proper values if not anagram', () => {
         expect(compare('dadaw', 'dadaf')).toEqual(false);
     });
-    it('returns proper values if empty inputs', () => {
+    it('returns nothing if empty inputs', () => {
         expect(compare('', '')).toEqual(false);
     });
 });

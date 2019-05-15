@@ -3,24 +3,60 @@
 exports[`renders correctly 1`] = `
 Array [
   <form>
-    <input
-      name="firstValue"
-      onChange={[Function]}
-      placeholder="First String"
-      type="text"
-      value=""
-    />
-    <input
-      name="secondValue"
-      onChange={[Function]}
-      placeholder="Second String"
-      type="text"
-      value=""
-    />
+    <div>
+      <input
+        name="firstValue"
+        onChange={[Function]}
+        placeholder="First String"
+        style={
+          Object {
+            "marginLeft": "1.5em",
+            "marginTop": "1.5em",
+          }
+        }
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <input
+        name="secondValue"
+        onChange={[Function]}
+        placeholder="Second String"
+        style={
+          Object {
+            "marginLeft": "1.5em",
+            "marginTop": "1.5em",
+          }
+        }
+        type="text"
+        value=""
+      />
+    </div>
   </form>,
-  <button
-    onClick={[Function]}
+  <div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "green",
+          "marginLeft": "1.5em",
+          "marginTop": "1.5em",
+        }
+      }
+    >
+      CHECK
+    </button>
+  </div>,
+  <hr
+    style={
+      Object {
+        "borderStyle": "solid",
+      }
+    }
   />,
-  "",
+  <div>
+    
+  </div>,
 ]
 `;

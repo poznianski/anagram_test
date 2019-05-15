@@ -25,7 +25,7 @@ it('is an anagram', () => {
   secondInput.simulate('change');
 
   wrapper.find('button').at(0).simulate('click');
-  expect(wrapper.find('span').at(0).text()).toEqual('It\'s an anagram');
+  expect(wrapper.find('span').at(0).text()).toEqual('It\'s an anagram!');
 });
 
 it('is not an anagram', () => {
@@ -39,5 +39,5 @@ it('is not an anagram', () => {
   secondInput.simulate('change');
 
   wrapper.find('button').at(0).simulate('click');
-  expect(wrapper.find('span').at(0).text()).toEqual('It isn\'t an anagram');
+  expect(wrapper.find('span').at(0).text()).toEqual('It isn\'t an anagram!');
 });
